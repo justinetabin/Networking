@@ -14,5 +14,5 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
   s.source_files = 'Networking/Module/**/*.{swift}'
-  s.dependency 'Alamofire', '5.2.2'
+  s.dependency 'Alamofire', '4.8.2'
 end
