@@ -1,3 +1,3 @@
-Infrastructure.xcodeproj/xcuserdata
+**/*.xcodeproj/xcuserdata/**
 Pods
 *.xcworkspace
