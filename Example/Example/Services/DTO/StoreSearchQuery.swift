@@ -6,8 +6,18 @@
 //  Copyright © 2020 Justine Tabin. All rights reserved.
 //
 
-struct StoreSearchQuery {
+import Networking
+
+struct StoreSearchQuery: NetworkQueryable {
     let term: String
     let country: String
     let media: String
+    
+    var dict: [String : String] {
+        [
+            "term": term,
+            "country": country,
+            "media": media
+        ]
+    }
 }
