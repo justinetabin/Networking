@@ -28,11 +28,7 @@ class StoreAPI {
         _ = networking.get(
             of: StoreResult<[StoreMovie]>.self,
             path: "/search",
-            query: [
-                "term": query.term,
-                "country": query.country,
-                "media": query.media
-        ]) { (data, error) in
+            query: query) { (data, error) in
             result(data?.results.map { $0.toMovie() }, nil)
         }
     }

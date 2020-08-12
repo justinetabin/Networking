@@ -7,6 +7,10 @@
 
 import Foundation
 
+public protocol NetworkQueryable {
+    var dict: [String: String] { get }
+}
+
 public protocol NetworkCancellable {
     func cancel()
 }
@@ -20,7 +24,7 @@ public protocol NetworkProtocol {
     func get<T: Decodable>(
         of: T.Type,
         path: String,
-        query: [String: String],
+        query: NetworkQueryable,
         result: @escaping (T?, Error?) -> Void
     ) -> NetworkCancellable?
 }
