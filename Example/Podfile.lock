@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (5.2.2)
-  - Networking (0.0.1):
+  - Networking (0.1.0):
     - Alamofire (= 5.2.2)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Networking: 2afce9279d2bff643caa7c16caf44648e54842bf
+  Networking: 7036bcca9b95f49b508bc49ab1874c5077695594
 
 PODFILE CHECKSUM: 9a8b9cf09d2a585e9fd660a3645290da950ed0a9
 

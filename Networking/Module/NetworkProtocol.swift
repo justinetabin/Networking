@@ -24,7 +24,24 @@ public protocol NetworkProtocol {
     func get<T: Decodable>(
         of: T.Type,
         path: String,
-        query: NetworkQueryable,
+        query: NetworkQueryable?,
         result: @escaping (T?, Error?) -> Void
     ) -> NetworkCancellable?
+}
+
+public extension NetworkProtocol {
+    
+    func get<T: Decodable>(
+        of: T.Type,
+        path: String,
+        query: NetworkQueryable? = nil,
+        result: @escaping (T?, Error?) -> Void
+    ) -> NetworkCancellable? {
+        get(
+            of: of,
+            path: path,
+            query: query,
+            result: result
+        )
+    }
 }

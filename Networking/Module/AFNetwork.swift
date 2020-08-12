@@ -23,14 +23,14 @@ open class AFNetwork: NetworkProtocol {
     public func get<T>(
         of: T.Type,
         path: String,
-        query: NetworkQueryable,
+        query: NetworkQueryable? = nil,
         result: @escaping (T?, Error?) -> Void
     ) -> NetworkCancellable? where T : Decodable {
         AFCancellable(
             dataRequest: AF.request(
                 baseUrl + path,
                 method: .get,
-                parameters: query.dict,
+                parameters: query?.dict,
                 headers: HTTPHeaders(headers)
             )
                 .responseDecodable(of: of) { (response) in
